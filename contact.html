@@ -31,6 +31,10 @@
     <link rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
 
 
+    <link rel="stylesheet" type="text/css" href="quform/css/base.css" /><!-- Base form styles -->
+    <link rel="stylesheet" type="text/css" href="quform/themes/light/light.css" /><!-- Theme styles -->
+
+
 
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -161,31 +165,97 @@
                             </ul><!-- /.contact-two__info-list -->
                         </div><!-- /.contact-two__content -->
                     </div><!-- /.col-lg-5 -->
+                    
                     <div class="col-lg-7">
-                        <form action="#" class="contact-two__form">
-                            <div class="contact-two__block">
-                                <h3>Get In Touch</h3>
-                                <p>we will contact you soon.
-                                    <br>
-                                    (within one to two hour or a day)
-                                </p>
-                            </div><!-- /.contact-two__block -->
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <input type="text" placeholder="Full Name">
-                                </div><!-- /.col-md-6 -->
-                                <div class="col-md-6">
-                                    <input type="text" placeholder="Email Address">
-                                </div><!-- /.col-md-6 -->
-                                <div class="col-md-12">
-                                    <input type="text" placeholder="Subject">
-                                </div><!-- /.col-md-12 -->
-                                <div class="col-md-12">
-                                    <textarea name="message" placeholder="Message"></textarea>
-                                    <button type="submit" class="thm-btn contact-two__btn">Send Message <i class="fa fa-angle-double-right"></i></button><!-- /.thm-btn contact-two__btn -->
-                                </div><!-- /.col-md-12 -->
-                            </div><!-- /.row -->
-                        </form><!-- /.contact-two__form -->
+
+                        <!--form start-->
+
+                        <!-- To copy the form HTML, start here -->
+                        <div class="quform-outer quform-theme-light-light">
+        <form class="quform" action="quform/process.php" method="post" enctype="multipart/form-data" onclick="">
+
+            <div class="quform-inner">
+                <h3 class="quform-title">Contact form</h3>
+                <p class="quform-description">Please get in touch using the form below.</p>
+
+                <div class="quform-elements">
+
+                    <!-- Begin 2 column Group -->
+                    <div class="quform-group-wrap quform-group-style-plain quform-group-alignment-left">
+                        <div class="quform-group-elements">
+
+                            <div class="quform-group-row quform-group-row-2cols">
+
+                                <!-- Begin Text input element -->
+                                <div class="quform-element quform-element-text">
+                                    <div class="quform-spacer">
+                                        <label for="name">Name <span class="quform-required">*</span></label>
+                                        <div class="quform-input">
+                                            <input id="name" type="text" name="name" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Text input element -->
+
+                                <!-- Begin Text input element -->
+                                <div class="quform-element quform-element-text">
+                                    <div class="quform-spacer">
+                                        <label for="email">Email address <span class="quform-required">*</span></label>
+                                        <div class="quform-input">
+                                            <input id="email" type="text" name="email" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Text input element -->
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- End 2 column Group -->
+
+                    <!-- Begin Textarea element -->
+                    <div class="quform-element quform-element-textarea quform-huge">
+                        <div class="quform-spacer">
+                            <label for="message">Message <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <textarea id="message" name="message" style="height: 130px;"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Textarea element -->
+
+                    <!-- Begin Captcha element -->
+                    <div class="quform-element quform-element-captcha">
+                        <div class="quform-spacer">
+                            <label for="type_the_word">Type the word <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <input id="type_the_word" type="text" name="type_the_word" />
+                            </div>
+                            <div class="quform-captcha">
+                                <div class="quform-captcha-inner">
+                                    <img src="quform/images/captcha/courier-new-light.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Captcha element -->
+
+                    <!-- Begin Submit button -->
+                    <div class="quform-submit">
+                        <div class="quform-submit-inner">
+                            <button type="submit" value="Send"><span><em>Send</em></span></button>
+                        </div>
+                        <div class="quform-loading-wrap"><span class="quform-loading"></span></div>
+                    </div>
+                    <!-- End Submit button -->
+               </div>
+           </div>
+        </form>
+    </div>
+    <!-- To copy the form HTML, end here -->
+
+                        <!--form end-->
                     </div><!-- /.col-lg-7 -->
                 </div><!-- /.row -->
             </div><!-- /.container -->
@@ -347,6 +417,10 @@
 
     <!-- template scripts -->
     <script src="assets/js/theme.js"></script>
+    
+    <script type="text/javascript" src="quform/js/plugins.js"></script>
+    <script type="text/javascript" src="quform/js/scripts.js"></script>
+
 </body>
 
 </html>
